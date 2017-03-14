@@ -18,5 +18,18 @@ namespace PrimitiveObsession
         public static bool operator <=(Price one, Price other) { return !(one > other); }
         public static bool operator >=(Price one, Price other) { return !(one < other); }
         public static bool operator <(Price one, Price other)  { return one._value < other._value ; }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as Price;
+
+            if (other == null) return false;
+            return other._value == _value;
+        }
+
+        public override int GetHashCode()
+        {
+            return _value.GetHashCode();
+        }
     }
 }
