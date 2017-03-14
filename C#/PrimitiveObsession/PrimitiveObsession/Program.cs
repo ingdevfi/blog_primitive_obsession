@@ -8,16 +8,17 @@ namespace PrimitiveObsession
 {
     class Program
     {
-        // Ne compile pas
-        //private const Quantity = 1000;
-        private const int MAX_QUANTITY = 1000000;
+        // Do not compile
+        //private const price BASE_PRICE = 1000;
+
+        private const int MAX_PRICE = 1000000;
 
         static void Main(string[] args)
         {
-            var qty = 1000;
-
-            if (qty > MAX_QUANTITY)
-                throw new Exception("qty is greater than max qty");
+            Price nonPrimitivePrice = 99.7;
+                        
+            if (nonPrimitivePrice >= MAX_PRICE)
+                throw new Exception("Price is greater than max price");
         }
     }
 }
